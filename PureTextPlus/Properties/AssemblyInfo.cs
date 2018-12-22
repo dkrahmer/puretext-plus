@@ -1,6 +1,5 @@
 ﻿#region Using directives
 
-using System;
 using System.Reflection;
 using System.Runtime.InteropServices;
 
@@ -10,11 +9,11 @@ using System.Runtime.InteropServices;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 [assembly: AssemblyTitle("PureTextPlus")]
-[assembly: AssemblyDescription("PureTextPlus adds a new Windows hot-key (default is WINDOWS+V) that allows you to paste text to any application without RTF or HTML formatting.")]
+[assembly: AssemblyDescription("PureTextPlus adds a new Windows hot-key (default is ctrl+shft+V) that allows you to paste text to any application without RTF or HTML formatting.")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("Melloware Inc http://www.melloware.com, Anderson Direct Marketing http://www.andersondm.com")]
+[assembly: AssemblyCompany("Melloware Inc http://www.melloware.com, Copyright 2018 Doug Krahmer")]
 [assembly: AssemblyProduct("PureTextPlus")]
-[assembly: AssemblyCopyright("Copyright 2011-2013 Melloware Inc, Copyright 2012 Anderson Direct Marketing")]
+[assembly: AssemblyCopyright("Copyright 2011-2013 Melloware Inc, Copyright 2018 Doug Krahmer")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
@@ -28,4 +27,4 @@ using System.Runtime.InteropServices;
 //
 // You can specify all the values or you can use the default the Revision and 
 // Build Numbers by using the '*' as shown below:
-[assembly: AssemblyVersion("3.0.0.6")]
+[assembly: AssemblyVersion("4.0.0.1")]

@@ -3,7 +3,7 @@
     
     Copyright (C) 2003 Steve P. Miller, http://www.stevemiller.net/puretext/
     Copyright (C) 2011 Melloware, http://www.melloware.com
-    Copyright (C) 2012 Anderson Direct Marketing, http://www.andersondm.com
+    Copyright (C) 2018 Doug Krahmer, http://www.dougsuniverse.com
     
    Licensed under the Apache License, Version 2.0 (the "License");
    you may not use this file except in compliance with the License.
@@ -23,9 +23,8 @@
     from just the idea of Puretext.
 */
 using System;
-using System.Drawing;
-using System.Windows.Forms;
 using System.Reflection;
+using System.Windows.Forms;
 
 namespace PureTextPlus
 {
@@ -40,25 +39,26 @@ namespace PureTextPlus
 			// The InitializeComponent() call is required for Windows Forms designer support.
 			//
 			InitializeComponent();
-			
+
 			Assembly assembly = System.Reflection.Assembly.GetExecutingAssembly();
 			AssemblyName asmName = assembly.GetName();
-			this.lblTitle.Text = String.Format("{0} {1}", Preferences.APPLICATION_TITLE, asmName.Version );
-			
+			lblTitle.Text = string.Format("{0} {1}", Preferences.APPLICATION_TITLE, asmName.Version);
+
 			object[] customAttributes = assembly.GetCustomAttributes(typeof(AssemblyDescriptionAttribute), false);
-			if ((customAttributes != null) && (customAttributes.Length > 0)) {
-				this.lblDescription.Text = ((AssemblyDescriptionAttribute)customAttributes[0]).Description;
+			if ((customAttributes != null) && (customAttributes.Length > 0))
+			{
+				lblDescription.Text = ((AssemblyDescriptionAttribute) customAttributes[0]).Description;
 			}
 			customAttributes = assembly.GetCustomAttributes(typeof(AssemblyCopyrightAttribute), false);
 			/*
 			if ((customAttributes != null) && (customAttributes.Length > 0))
-				this.lblCopyright.Text = ((AssemblyCopyrightAttribute)customAttributes[0]).Copyright;
+				lblCopyright.Text = ((AssemblyCopyrightAttribute)customAttributes[0]).Copyright;
 			*/
 		}
-		
-		void BtnCloseClick(object sender, EventArgs e)
+
+		private void BtnCloseClick(object sender, EventArgs e)
 		{
-			this.Close();
+			Close();
 		}
 
 		private void lblMelloware_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -66,9 +66,9 @@ namespace PureTextPlus
 			System.Diagnostics.Process.Start("http://melloware.com");
 		}
 
-		private void lblADM_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+		private void lblKrahmer_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
 		{
-			System.Diagnostics.Process.Start("http://www.andersondm.com");
+			System.Diagnostics.Process.Start("http://www.dougsuniverse.com");
 		}
 
 		private void lnkMiller_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)

@@ -1,26 +1,26 @@
 ﻿/*
-    PureText+ - http://code.google.com/p/puretext-plus/
-    
-    Copyright (C) 2003 Steve P. Miller, http://www.stevemiller.net/puretext/
-    Copyright (C) 2011 Melloware, http://www.melloware.com
-    Copyright (C) 2012 Anderson Direct Marketing, http://www.andersondm.com
-    
+	PureText+ - http://code.google.com/p/puretext-plus/
+	
+	Copyright (C) 2003 Steve P. Miller, http://www.stevemiller.net/puretext/
+	Copyright (C) 2011 Melloware, http://www.melloware.com
+	Copyright (C) 2018 Doug Krahmer, http://www.dougsuniverse.com
+	
    Licensed under the Apache License, Version 2.0 (the "License");
    you may not use this file except in compliance with the License.
    You may obtain a copy of the License at
 
-       http://www.apache.org/licenses/LICENSE-2.0
+	   http://www.apache.org/licenses/LICENSE-2.0
 
    Unless required by applicable law or agreed to in writing, software
    distributed under the License is distributed on an "AS IS" BASIS,
    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
    See the License for the specific language governing permissions and
    limitations under the License.
-    
-    The idea of the Original PureText Code is Copyright (C) 2003 Steve P. Miller
-    
-    NO code was taken from the original project this was rewritten from scratch
-    from just the idea of Puretext.
+	
+	The idea of the Original PureText Code is Copyright (C) 2003 Steve P. Miller
+	
+	NO code was taken from the original project this was rewritten from scratch
+	from just the idea of Puretext.
 */
 namespace PureTextPlus
 {
@@ -30,21 +30,23 @@ namespace PureTextPlus
 		/// Designer variable used to keep track of non-visual components.
 		/// </summary>
 		private System.ComponentModel.IContainer components = null;
-		
+
 		/// <summary>
 		/// Disposes resources used by the form.
 		/// </summary>
 		/// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
 		protected override void Dispose(bool disposing)
 		{
-			if (disposing) {
-				if (components != null) {
+			if (disposing)
+			{
+				if (components != null)
+				{
 					components.Dispose();
 				}
 			}
 			base.Dispose(disposing);
 		}
-		
+
 		/// <summary>
 		/// This method is required for Windows Forms designer support.
 		/// Do not change the method contents inside the source code editor. The Forms designer might
@@ -61,14 +63,14 @@ namespace PureTextPlus
 			this.lblOriginalAuthor = new System.Windows.Forms.Label();
 			this.btnClose = new System.Windows.Forms.Button();
 			this.lnkMiller = new System.Windows.Forms.LinkLabel();
-			this.lblADM = new System.Windows.Forms.LinkLabel();
+			this.lblKrahmer = new System.Windows.Forms.LinkLabel();
 			this.lblCopyright2 = new System.Windows.Forms.Label();
-			((System.ComponentModel.ISupportInitialize)(this.imgIcon)).BeginInit();
+			((System.ComponentModel.ISupportInitialize) (this.imgIcon)).BeginInit();
 			this.SuspendLayout();
 			// 
 			// imgIcon
 			// 
-			this.imgIcon.Image = ((System.Drawing.Image)(resources.GetObject("imgIcon.Image")));
+			this.imgIcon.Image = ((System.Drawing.Image) (resources.GetObject("imgIcon.Image")));
 			this.imgIcon.InitialImage = null;
 			this.imgIcon.Location = new System.Drawing.Point(12, 12);
 			this.imgIcon.Name = "imgIcon";
@@ -78,7 +80,7 @@ namespace PureTextPlus
 			// 
 			// lblTitle
 			// 
-			this.lblTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.lblTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
 			this.lblTitle.Location = new System.Drawing.Point(72, 12);
 			this.lblTitle.Name = "lblTitle";
 			this.lblTitle.Size = new System.Drawing.Size(310, 23);
@@ -145,16 +147,16 @@ namespace PureTextPlus
 			this.lnkMiller.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
 			this.lnkMiller.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lnkMiller_LinkClicked);
 			// 
-			// lblADM
+			// lblKrahmer
 			// 
-			this.lblADM.Location = new System.Drawing.Point(257, 120);
-			this.lblADM.Name = "lblADM";
-			this.lblADM.Size = new System.Drawing.Size(184, 23);
-			this.lblADM.TabIndex = 9;
-			this.lblADM.TabStop = true;
-			this.lblADM.Text = "http://www.andersondm.com";
-			this.lblADM.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-			this.lblADM.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lblADM_LinkClicked);
+			this.lblKrahmer.Location = new System.Drawing.Point(257, 120);
+			this.lblKrahmer.Name = "lblKrahmer";
+			this.lblKrahmer.Size = new System.Drawing.Size(184, 23);
+			this.lblKrahmer.TabIndex = 9;
+			this.lblKrahmer.TabStop = true;
+			this.lblKrahmer.Text = "http://www.dougsuniverse.com";
+			this.lblKrahmer.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+			this.lblKrahmer.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lblKrahmer_LinkClicked);
 			// 
 			// lblCopyright2
 			// 
@@ -163,7 +165,7 @@ namespace PureTextPlus
 			this.lblCopyright2.Name = "lblCopyright2";
 			this.lblCopyright2.Size = new System.Drawing.Size(239, 23);
 			this.lblCopyright2.TabIndex = 8;
-			this.lblCopyright2.Text = "Coppyright 2012 Anderson Direct Marketing";
+			this.lblCopyright2.Text = "Coppyright 2018 Doug Krahmer";
 			this.lblCopyright2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
 			// 
 			// FormAbout
@@ -171,7 +173,7 @@ namespace PureTextPlus
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.ClientSize = new System.Drawing.Size(453, 221);
-			this.Controls.Add(this.lblADM);
+			this.Controls.Add(this.lblKrahmer);
 			this.Controls.Add(this.lblCopyright2);
 			this.Controls.Add(this.lnkMiller);
 			this.Controls.Add(this.btnClose);
@@ -182,7 +184,7 @@ namespace PureTextPlus
 			this.Controls.Add(this.lblTitle);
 			this.Controls.Add(this.imgIcon);
 			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
-			this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+			this.Icon = ((System.Drawing.Icon) (resources.GetObject("$this.Icon")));
 			this.MaximizeBox = false;
 			this.MinimizeBox = false;
 			this.Name = "FormAbout";
@@ -191,7 +193,7 @@ namespace PureTextPlus
 			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
 			this.Text = "About PureTextPlus";
 			this.TopMost = true;
-			((System.ComponentModel.ISupportInitialize)(this.imgIcon)).EndInit();
+			((System.ComponentModel.ISupportInitialize) (this.imgIcon)).EndInit();
 			this.ResumeLayout(false);
 
 		}
@@ -203,7 +205,7 @@ namespace PureTextPlus
 		private System.Windows.Forms.PictureBox imgIcon;
 		private System.Windows.Forms.Label lblDescription;
 		private System.Windows.Forms.Label lblTitle;
-		private System.Windows.Forms.LinkLabel lblADM;
+		private System.Windows.Forms.LinkLabel lblKrahmer;
 		private System.Windows.Forms.Label lblCopyright2;
 	}
 }

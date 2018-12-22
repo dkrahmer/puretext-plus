@@ -1,26 +1,26 @@
 ﻿/*
-    PureText+ - http://code.google.com/p/puretext-plus/
-    
-    Copyright (C) 2003 Steve P. Miller, http://www.stevemiller.net/puretext/
-    Copyright (C) 2011 Melloware, http://www.melloware.com
-    Copyright (C) 2012 Anderson Direct Marketing, http://www.andersondm.com
-    
+	PureText+ - http://code.google.com/p/puretext-plus/
+	
+	Copyright (C) 2003 Steve P. Miller, http://www.stevemiller.net/puretext/
+	Copyright (C) 2011 Melloware, http://www.melloware.com
+	Copyright (C) 2018 Doug Krahmer, http://www.dougsuniverse.com
+	
    Licensed under the Apache License, Version 2.0 (the "License");
    you may not use this file except in compliance with the License.
    You may obtain a copy of the License at
 
-       http://www.apache.org/licenses/LICENSE-2.0
+	   http://www.apache.org/licenses/LICENSE-2.0
 
    Unless required by applicable law or agreed to in writing, software
    distributed under the License is distributed on an "AS IS" BASIS,
    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
    See the License for the specific language governing permissions and
    limitations under the License.
-    
-    The idea of the Original PureText Code is Copyright (C) 2003 Steve P. Miller
-    
-    NO code was taken from the original project this was rewritten from scratch
-    from just the idea of Puretext.
+	
+	The idea of the Original PureText Code is Copyright (C) 2003 Steve P. Miller
+	
+	NO code was taken from the original project this was rewritten from scratch
+	from just the idea of Puretext.
 */
 using System;
 using System.Runtime.InteropServices;
@@ -29,7 +29,7 @@ using System.Windows.Forms;
 namespace PureTextPlus
 {
 	/// <summary>
-	/// Hotkey keyboard hook for monitoring Windows+V or whatever key combination chosen.
+	/// Hotkey keyboard hook for monitoring the key combination chosen.
 	/// Based on Blog Post: http://www.liensberger.it/web/blog/?p=207
 	/// </summary>
 	public sealed class HotkeyHook : IDisposable
@@ -40,7 +40,7 @@ namespace PureTextPlus
 		// Unregisters the hot key with Windows.
 		[DllImport("user32.dll")]
 		private static extern bool UnregisterHotKey(IntPtr hWnd, int id);
-		
+
 		// instance variable to hold the native window
 		private Window _window = new Window();
 		private int _currentId;
@@ -50,12 +50,12 @@ namespace PureTextPlus
 		/// </summary>
 		private class Window : NativeWindow, IDisposable
 		{
-			private static int WM_HOTKEY = 0x0312;
+			private static readonly int WM_HOTKEY = 0x0312;
 
 			public Window()
 			{
 				// create the handle for the window.
-				this.CreateHandle(new CreateParams());
+				CreateHandle(new CreateParams());
 			}
 
 			/// <summary>
@@ -70,8 +70,8 @@ namespace PureTextPlus
 				if (m.Msg == WM_HOTKEY)
 				{
 					// get the keys.
-					Keys key = (Keys)(((int)m.LParam >> 16) & 0xFFFF);
-					ModifierKeys modifier = (ModifierKeys)((int)m.LParam & 0xFFFF);
+					Keys key = (Keys) (((int) m.LParam >> 16) & 0xFFFF);
+					ModifierKeys modifier = (ModifierKeys) ((int) m.LParam & 0xFFFF);
 
 					// invoke the event to notify the parent.
 					if (KeyPressed != null)
@@ -85,7 +85,7 @@ namespace PureTextPlus
 
 			public void Dispose()
 			{
-				this.DestroyHandle();
+				DestroyHandle();
 			}
 
 			#endregion
@@ -94,7 +94,7 @@ namespace PureTextPlus
 		public HotkeyHook()
 		{
 			// register the event of the inner native window.
-			_window.KeyPressed += delegate(object sender, KeyPressedEventArgs args)
+			_window.KeyPressed += delegate (object sender, KeyPressedEventArgs args)
 			{
 				if (KeyPressed != null)
 					KeyPressed(this, args);
@@ -115,11 +115,12 @@ namespace PureTextPlus
 			if (!RegisterHotKey(_window.Handle, _currentId, Convert.ToInt16(modifier), Convert.ToInt16(key)))
 				throw new InvalidOperationException("Couldn’t register the hot key.");
 		}
-		
+
 		/// <summary>
 		/// Unregisters any registered hotkeys
 		/// </summary>
-		public void UnregisterHotKeys() {
+		public void UnregisterHotKeys()
+		{
 			// unregister all the registered hot keys.
 			for (int i = _currentId; i > 0; i--)
 			{
@@ -154,8 +155,8 @@ namespace PureTextPlus
 	/// </summary>
 	public class KeyPressedEventArgs : EventArgs
 	{
-		private ModifierKeys _modifier;
-		private Keys _key;
+		private readonly ModifierKeys _modifier;
+		private readonly Keys _key;
 
 		internal KeyPressedEventArgs(ModifierKeys modifier, Keys key)
 		{

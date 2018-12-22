@@ -1,26 +1,26 @@
 ﻿/*
-    PureText+ - http://code.google.com/p/puretext-plus/
-    
-    Copyright (C) 2003 Steve P. Miller, http://www.stevemiller.net/puretext/
-    Copyright (C) 2011 Melloware, http://www.melloware.com
-    Copyright (C) 2012 Anderson Direct Marketing, http://www.andersondm.com
-    
+	PureText+ - http://code.google.com/p/puretext-plus/
+	
+	Copyright (C) 2003 Steve P. Miller, http://www.stevemiller.net/puretext/
+	Copyright (C) 2011 Melloware, http://www.melloware.com
+	Copyright (C) 2018 Doug Krahmer, http://www.dougsuniverse.com
+	
    Licensed under the Apache License, Version 2.0 (the "License");
    you may not use this file except in compliance with the License.
    You may obtain a copy of the License at
 
-       http://www.apache.org/licenses/LICENSE-2.0
+	   http://www.apache.org/licenses/LICENSE-2.0
 
    Unless required by applicable law or agreed to in writing, software
    distributed under the License is distributed on an "AS IS" BASIS,
    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
    See the License for the specific language governing permissions and
    limitations under the License.
-    
-    The idea of the Original PureText Code is Copyright (C) 2003 Steve P. Miller
-    
-    NO code was taken from the original project this was rewritten from scratch
-    from just the idea of Puretext.
+	
+	The idea of the Original PureText Code is Copyright (C) 2003 Steve P. Miller
+	
+	NO code was taken from the original project this was rewritten from scratch
+	from just the idea of Puretext.
 */
 namespace PureTextPlus
 {
@@ -30,21 +30,23 @@ namespace PureTextPlus
 		/// Designer variable used to keep track of non-visual components.
 		/// </summary>
 		private System.ComponentModel.IContainer components = null;
-		
+
 		/// <summary>
 		/// Disposes resources used by the form.
 		/// </summary>
 		/// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
 		protected override void Dispose(bool disposing)
 		{
-			if (disposing) {
-				if (components != null) {
+			if (disposing)
+			{
+				if (components != null)
+				{
 					components.Dispose();
 				}
 			}
 			base.Dispose(disposing);
 		}
-		
+
 		/// <summary>
 		/// This method is required for Windows Forms designer support.
 		/// Do not change the method contents inside the source code editor. The Forms designer might
@@ -100,62 +102,62 @@ namespace PureTextPlus
 			// 
 			this.cboLetter.FormattingEnabled = true;
 			this.cboLetter.Items.AddRange(new object[] {
-            "A",
-            "B",
-            "C",
-            "D",
-            "E",
-            "F",
-            "G",
-            "H",
-            "I",
-            "J",
-            "K",
-            "L",
-            "M",
-            "N",
-            "O",
-            "P",
-            "Q",
-            "R",
-            "S",
-            "T",
-            "U",
-            "V",
-            "X",
-            "Y",
-            "Z",
-            "0",
-            "1",
-            "2",
-            "3",
-            "4",
-            "5",
-            "6",
-            "7",
-            "8",
-            "9",
-            "F1",
-            "F2",
-            "F3",
-            "F4",
-            "F5",
-            "F6",
-            "F7",
-            "F8",
-            "F9",
-            "F10",
-            "F11",
-            "F12",
-            "Oemplus",
-            "Oemcomma",
-            "OemMinus",
-            "OemPeriod",
-            "Oemtilde",
-            "OemOpenBrackets",
-            "OemCloseBrackets",
-            "OemQuotes",
-            "OemBackslash"});
+			"A",
+			"B",
+			"C",
+			"D",
+			"E",
+			"F",
+			"G",
+			"H",
+			"I",
+			"J",
+			"K",
+			"L",
+			"M",
+			"N",
+			"O",
+			"P",
+			"Q",
+			"R",
+			"S",
+			"T",
+			"U",
+			"V",
+			"X",
+			"Y",
+			"Z",
+			"0",
+			"1",
+			"2",
+			"3",
+			"4",
+			"5",
+			"6",
+			"7",
+			"8",
+			"9",
+			"F1",
+			"F2",
+			"F3",
+			"F4",
+			"F5",
+			"F6",
+			"F7",
+			"F8",
+			"F9",
+			"F10",
+			"F11",
+			"F12",
+			"Oemplus",
+			"Oemcomma",
+			"OemMinus",
+			"OemPeriod",
+			"Oemtilde",
+			"OemOpenBrackets",
+			"OemCloseBrackets",
+			"OemQuotes",
+			"OemBackslash"});
 			this.cboLetter.Location = new System.Drawing.Point(6, 22);
 			this.cboLetter.Name = "cboLetter";
 			this.cboLetter.Size = new System.Drawing.Size(198, 21);
@@ -283,62 +285,62 @@ namespace PureTextPlus
 			// 
 			this.cboPlainLetter.FormattingEnabled = true;
 			this.cboPlainLetter.Items.AddRange(new object[] {
-            "A",
-            "B",
-            "C",
-            "D",
-            "E",
-            "F",
-            "G",
-            "H",
-            "I",
-            "J",
-            "K",
-            "L",
-            "M",
-            "N",
-            "O",
-            "P",
-            "Q",
-            "R",
-            "S",
-            "T",
-            "U",
-            "V",
-            "X",
-            "Y",
-            "Z",
-            "0",
-            "1",
-            "2",
-            "3",
-            "4",
-            "5",
-            "6",
-            "7",
-            "8",
-            "9",
-            "F1",
-            "F2",
-            "F3",
-            "F4",
-            "F5",
-            "F6",
-            "F7",
-            "F8",
-            "F9",
-            "F10",
-            "F11",
-            "F12",
-            "Oemplus",
-            "Oemcomma",
-            "OemMinus",
-            "OemPeriod",
-            "Oemtilde",
-            "OemOpenBrackets",
-            "OemCloseBrackets",
-            "OemQuotes",
-            "OemBackslash"});
+			"A",
+			"B",
+			"C",
+			"D",
+			"E",
+			"F",
+			"G",
+			"H",
+			"I",
+			"J",
+			"K",
+			"L",
+			"M",
+			"N",
+			"O",
+			"P",
+			"Q",
+			"R",
+			"S",
+			"T",
+			"U",
+			"V",
+			"X",
+			"Y",
+			"Z",
+			"0",
+			"1",
+			"2",
+			"3",
+			"4",
+			"5",
+			"6",
+			"7",
+			"8",
+			"9",
+			"F1",
+			"F2",
+			"F3",
+			"F4",
+			"F5",
+			"F6",
+			"F7",
+			"F8",
+			"F9",
+			"F10",
+			"F11",
+			"F12",
+			"Oemplus",
+			"Oemcomma",
+			"OemMinus",
+			"OemPeriod",
+			"Oemtilde",
+			"OemOpenBrackets",
+			"OemCloseBrackets",
+			"OemQuotes",
+			"OemBackslash"});
 			this.cboPlainLetter.Location = new System.Drawing.Point(6, 22);
 			this.cboPlainLetter.Name = "cboPlainLetter";
 			this.cboPlainLetter.Size = new System.Drawing.Size(198, 21);
@@ -388,62 +390,62 @@ namespace PureTextPlus
 			// 
 			this.cboHtmlLetter.FormattingEnabled = true;
 			this.cboHtmlLetter.Items.AddRange(new object[] {
-            "A",
-            "B",
-            "C",
-            "D",
-            "E",
-            "F",
-            "G",
-            "H",
-            "I",
-            "J",
-            "K",
-            "L",
-            "M",
-            "N",
-            "O",
-            "P",
-            "Q",
-            "R",
-            "S",
-            "T",
-            "U",
-            "V",
-            "X",
-            "Y",
-            "Z",
-            "0",
-            "1",
-            "2",
-            "3",
-            "4",
-            "5",
-            "6",
-            "7",
-            "8",
-            "9",
-            "F1",
-            "F2",
-            "F3",
-            "F4",
-            "F5",
-            "F6",
-            "F7",
-            "F8",
-            "F9",
-            "F10",
-            "F11",
-            "F12",
-            "Oemplus",
-            "Oemcomma",
-            "OemMinus",
-            "OemPeriod",
-            "Oemtilde",
-            "OemOpenBrackets",
-            "OemCloseBrackets",
-            "OemQuotes",
-            "OemBackslash"});
+			"A",
+			"B",
+			"C",
+			"D",
+			"E",
+			"F",
+			"G",
+			"H",
+			"I",
+			"J",
+			"K",
+			"L",
+			"M",
+			"N",
+			"O",
+			"P",
+			"Q",
+			"R",
+			"S",
+			"T",
+			"U",
+			"V",
+			"X",
+			"Y",
+			"Z",
+			"0",
+			"1",
+			"2",
+			"3",
+			"4",
+			"5",
+			"6",
+			"7",
+			"8",
+			"9",
+			"F1",
+			"F2",
+			"F3",
+			"F4",
+			"F5",
+			"F6",
+			"F7",
+			"F8",
+			"F9",
+			"F10",
+			"F11",
+			"F12",
+			"Oemplus",
+			"Oemcomma",
+			"OemMinus",
+			"OemPeriod",
+			"Oemtilde",
+			"OemOpenBrackets",
+			"OemCloseBrackets",
+			"OemQuotes",
+			"OemBackslash"});
 			this.cboHtmlLetter.Location = new System.Drawing.Point(6, 22);
 			this.cboHtmlLetter.Name = "cboHtmlLetter";
 			this.cboHtmlLetter.Size = new System.Drawing.Size(198, 21);
@@ -489,7 +491,7 @@ namespace PureTextPlus
 			this.Controls.Add(this.btnOK);
 			this.Controls.Add(this.gbHotkey);
 			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
-			this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+			this.Icon = ((System.Drawing.Icon) (resources.GetObject("$this.Icon")));
 			this.MaximizeBox = false;
 			this.MinimizeBox = false;
 			this.Name = "FormOptions";

@@ -3,7 +3,7 @@
     
     Copyright (C) 2003 Steve P. Miller, http://www.stevemiller.net/puretext/
     Copyright (C) 2011 Melloware, http://www.melloware.com
-    Copyright (C) 2012 Anderson Direct Marketing, http://www.andersondm.com
+    Copyright (C) 2018 Doug Krahmer, http://www.dougsuniverse.com
     
    Licensed under the Apache License, Version 2.0 (the "License");
    you may not use this file except in compliance with the License.
@@ -23,7 +23,6 @@
     from just the idea of Puretext.
 */
 using System;
-using System.Drawing;
 using System.Windows.Forms;
 
 namespace PureTextPlus
@@ -39,7 +38,7 @@ namespace PureTextPlus
 			// The InitializeComponent() call is required for Windows Forms designer support.
 			//
 			InitializeComponent();
-			
+
 			chkControl.Checked = Preferences.Instance.ModifierPureControl;
 			chkShift.Checked = Preferences.Instance.ModifierPureShift;
 			chkWin.Checked = Preferences.Instance.ModifierPureWindows;
@@ -57,8 +56,8 @@ namespace PureTextPlus
 			chkRunAtStartup.Checked = Preferences.Instance.Startup;
 			chkTrayIcon.Checked = Preferences.Instance.TrayIconVisible;
 		}
-		
-		void BtnOKClick(object sender, EventArgs e)
+
+		private void BtnOKClick(object sender, EventArgs e)
 		{
 			Preferences.Instance.ModifierPureControl = chkControl.Checked;
 			Preferences.Instance.ModifierPureShift = chkShift.Checked;
@@ -73,20 +72,20 @@ namespace PureTextPlus
 			Preferences.Instance.PlaySound = chkPlaySound.Checked;
 			Preferences.Instance.Startup = chkRunAtStartup.Checked;
 			Preferences.Instance.TrayIconVisible = chkTrayIcon.Checked;
-			Preferences.Instance.Hotkey = (string)cboLetter.SelectedItem;
-			Preferences.Instance.PlainTextHotKey = (string)cboPlainLetter.SelectedItem;
-			Preferences.Instance.HtmlTextHotKey = (string)cboHtmlLetter.SelectedItem;
-			
+			Preferences.Instance.Hotkey = (string) cboLetter.SelectedItem;
+			Preferences.Instance.PlainTextHotKey = (string) cboPlainLetter.SelectedItem;
+			Preferences.Instance.HtmlTextHotKey = (string) cboHtmlLetter.SelectedItem;
+
 			Preferences.Instance.Save();
-			this.DialogResult = DialogResult.OK;
-			this.Close();
+			DialogResult = DialogResult.OK;
+			Close();
 
 		}
-		
-		void BtnCancelClick(object sender, EventArgs e)
+
+		private void BtnCancelClick(object sender, EventArgs e)
 		{
-			this.DialogResult = DialogResult.Cancel;
-			this.Close();
+			DialogResult = DialogResult.Cancel;
+			Close();
 		}
 	}
 }
